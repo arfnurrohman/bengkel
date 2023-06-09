@@ -25,6 +25,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="halaman3">halaman 3</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="halaman4">halaman 4</a>
+                                </li>
                                 @endauth
                     </ul>
 

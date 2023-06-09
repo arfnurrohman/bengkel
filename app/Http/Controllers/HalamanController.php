@@ -18,4 +18,8 @@ public function halaman3()
   {
   return view("halaman/halaman3");
 }
+public function halaman4()
+  {
+  return view("halaman/halaman4");
+}
 }

@@ -25,5 +25,5 @@ Route::middleware('auth')->group(function () {
 Route::get('/halaman1', [App\Http\Controllers\HalamanController::class, 'halaman1']);
 Route::get('/halaman2', [App\Http\Controllers\HalamanController::class, 'halaman2']);
 Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman3']);
+Route::get('/halaman4', [App\Http\Controllers\HalamanController::class, 'halaman4']);
 });
-Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman3']);
