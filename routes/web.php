@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,10 +20,29 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'checkRole:admin'])->group(function () {
+
 
 Route::get('/halaman1', [App\Http\Controllers\HalamanController::class, 'halaman1']);
 Route::get('/halaman2', [App\Http\Controllers\HalamanController::class, 'halaman2']);
 Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman3']);
+
+
+
 });
+
+Route::middleware(['auth', 'checkRole:admin,user'])->group(function () { 
 Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman3']);
+ });
+
+ Route::get('/datauser',[App\Http\Controllers\UserController::class, 'datauser']);
+ Route::get('/fromuser', [App\Http\Controllers\UserController::class, 'formuser']);
+ Route::post('/adduser', [App\Http\Controllers\UserController::class, 'adduser']); 
+ Route::get('/datauser/{id}', [App\Http\Controllers\UserController::class, 'edituser']);
+ Route::post('/updateuser', [App\Http\Controllers\UserController::class, 'updateuser']);
+ Route::get('/deleteuser/{id}', [App\Http\Controllers\UserController::class, 'deleteuser']);
+
+
+ Route::get('/databengkel',[App\Http\Controllers\BengkelController::class, 'databengkel']);
+ Route::get('/formbengkel', [App\Http\Controllers\BengkelController::class, 'formbengkel']);
+ Route::post('/addbengkel', [App\Http\Controllers\BengkelController::class, 'addbengkel']); 
