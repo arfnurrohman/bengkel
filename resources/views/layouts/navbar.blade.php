@@ -1,9 +1,7 @@
 
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+               
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -13,22 +11,29 @@
                     <ul class="navbar-nav me-auto">
                     </li>
                     <li class="nav-item">
-                                    <a class="nav-link" href="halaman3">halaman 3</a>
-                                </li>
                     @auth
-                                <li class="nav-item">
-                                    <a class="nav-link" href="halaman1">halaman 1</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="halaman2">halaman 2</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="halaman3">halaman 3</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="halaman4">halaman 4</a>
-                                </li>
-                                @endauth
+             
+                @if(Auth::user()->role == 'admin')
+                <li class="nav-item">
+                    <a class="nav-link" href="/halaman1">Halaman 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/halaman2">Halaman 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/datauser">data user</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/databengkel">data bengkel</a>
+                </li>
+                @endif
+                @if(in_array(Auth::user()->role, ['admin','user']))
+                <li class="nav-item">
+                    <a class="nav-link" href="/halaman3">Halaman 3</a>
+                </li>
+                @endif
+                @endauth
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
