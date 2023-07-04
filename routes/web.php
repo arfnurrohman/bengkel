@@ -29,6 +29,7 @@ Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman
 
 
 
+<<<<<<< HEAD
 });
 
 Route::middleware(['auth', 'checkRole:admin,user'])->group(function () { 
@@ -51,3 +52,7 @@ Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman
  Route::get('/deletebengkel/{id}',[App\Http\Controllers\BengkelController::class, 'deletebengkel']);
 
  
+=======
+Route::get('/halaman4', [App\Http\Controllers\HalamanController::class, 'halaman4']);
+});
+>>>>>>> eacdf29301a691b0b6e2f5971d93f8b5900a59bc
