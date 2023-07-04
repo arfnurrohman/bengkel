@@ -14,9 +14,9 @@ class BengkelController extends Controller
 {
     public function databengkel()
     {
-        $databengkel = DB::table('bengkels')->get();
-        //dd($datauser);
-        return view('bengkel.databengkel', ['databengkel' => $databengkel]);
+        $datauser = DB::table('bengkels')->get();
+       
+        return view('bengkel.databengkel', ['databengkel' => $datauser]);
     }
     public function formbengkel()
     {
@@ -24,23 +24,69 @@ class BengkelController extends Controller
     }
     public function addbengkel(Request $request)
     {
-        $bengkel = new bengkel;
-        $bengkel->nama = $request->nama;
-        $bengkel->jenis = $request->jenis;
-        $bengkel->harga = $request->harga;
-        $bengkel->keterangan = $request->keterangan;
-        
+        $user = new bengkel;
+        $user->nama = $request->nama;
+        $user->jenis = $request->jenis;
+        $user->harga = $request->harga;
+        $user->keterangan = $request->keterangan;
         if($request->hasFile('foto')){
             $destination_path = 'public/images';
 
-            $bengkel->image = $request->file('foto')->getClientOriginalName();
+            $user->image = $request->file('foto')->getClientOriginalName();
             $image = $request->file('foto');
             $image_name = $image->getClientOriginalName();
             $path = $request->file('foto')->storeAs($destination_path,$image_name);
             
         }
-        $bengkel->save();
-        $datauser = DB::table('users')->get();
-        return redirect('/datauser')->with('status', 'Data Berhasil Ditambahkan!');
+        $user->save();
+        $datauser = DB::table('bengkels')->get();
+        return redirect('/databengkel')->with('status', 'Data Berhasil Ditambahkan!');
     }
+    public function editbengkel($id)
+    {
+        $user = DB::table('bengkels')->find($id);
+        return view('bengkel.editbengkel', ["bengkel" => $user]);
+    }
+    
+    public function updatebengkel(Request $request)
+    {
+        $user = bengkel::find($request->id);
+        $user->nama = $request->nama;
+        $user->jenis = $request->jenis;
+        $user->harga = $request->harga;
+        $user->keterangan = $request->keterangan;
+        if($request->hasFile('foto')){
+            if(Storage::exists('public/images/'.$user->image)){
+                Storage::delete('public/images/'.$user->image);
+                
+    
+            }
+            $destination_path = 'public/images';
+            $user->image = $request->file('foto')->getClientOriginalName();
+            $image = $request->file('foto');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('foto')->storeAs($destination_path,$image_name);
+            // $destination_path = 'public/images';
+            // $user->image = $request->file('foto')->getClientOriginalName();
+            // $user = $request->file('foto');
+            // $gambar_name = $user->getClientOriginalName();
+            // $request->file('foto')->storeAs($destination_path, $gambar_name);
+        }
+        $user->save();
+        return redirect("/databengkel");
+    }
+    public function deletebengkel($id)
+    {
+        $user = bengkel::find($id);
+        if(Storage::exists('public/images/'.$user->image)){
+            Storage::delete('public/images/'.$user->image);
+            $user->delete();
+
+        }else{
+            $user->delete();
+        }
+        return redirect("/databengkel");
+    }
+
+
 }

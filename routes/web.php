@@ -46,3 +46,8 @@ Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman
  Route::get('/databengkel',[App\Http\Controllers\BengkelController::class, 'databengkel']);
  Route::get('/formbengkel', [App\Http\Controllers\BengkelController::class, 'formbengkel']);
  Route::post('/addbengkel', [App\Http\Controllers\BengkelController::class, 'addbengkel']); 
+ Route::get('/databengkel/{id}',[App\Http\Controllers\BengkelController::class, 'editbengkel']);
+ Route::post('/updatebengkel',[App\Http\Controllers\BengkelController::class, 'updatebengkel']);
+ Route::get('/deletebengkel/{id}',[App\Http\Controllers\BengkelController::class, 'deletebengkel']);
+
+ 

@@ -27,10 +27,10 @@
       <td>{{ $bengkel->jenis }}</td>
       <td>{{$bengkel->harga}}</td>
       <td>{{ $bengkel->keterangan }}</td>
-      <td><img src="{{ asset('/storage/images/'.$user->image )}}" style="width: 40px;" height="40px" alt=""></td>
+      <td><img src="{{ asset('/storage/images/'.$bengkel->image )}}" style="width: 40px;" height="40px" alt=""></td>
       <td>
-<a href="datauser/{{$user->id}}"class="btn btn-primary">Edit</a>
-<a href="javascript:deleteuser('{{$user->name}}',{{$user->id}})"class="btn btn-primary">Hapus</a>
+<a href="databengkel/{{$bengkel->id}}"class="btn btn-primary">Edit</a>
+<a href="javascript:deletebengkel('{{$bengkel->nama}}',{{$bengkel->id}})"class="btn btn-primary">Hapus</a>
 </td>
 
     </tr>
@@ -41,7 +41,7 @@
     function deleteuser(data, id) {
         var r = confirm("Delete data " + data + "?");
         if (r == true) {
-            window.location.replace("/deleteuser/" + id);
+            window.location.replace("/deletebengkel/" + id);
         }
     }
 </script>

@@ -218,16 +218,16 @@
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
-
+  @foreach ($datauser as $user)
   <div class="container marketing">
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
-      <img src="{{url('img/mtb1.jpg')}}" class="bd-placeholder-img rounded-circle" width="140" height="140">
-      <h2 class="fw-normal">Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                                    <td><img src="{{ asset('/storage/images/'. Auth::user()->image )}}" style="width: 25px;" height="25px" alt=""></td>
+      <h2 class="fw-normal">{{ Auth::user()->name }}</h2>
+        <p>{{ Auth::user()->name }}</p>
+        <p><a class="btn btn-secondary" href="#">{{ Auth::user()->name }}&raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
       <img src="{{url('img/fixie.jpg')}}" class="bd-placeholder-img rounded-circle" width="140" height="140">
@@ -242,7 +242,7 @@
         <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
-
+@endforeach
 
     <!-- START THE FEATURETTES -->
 
