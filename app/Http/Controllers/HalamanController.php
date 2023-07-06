@@ -8,14 +8,15 @@ class HalamanController extends Controller
 {
   public function halaman1()
   {
-    $datauser = DB::table('users')->get();
+    $datauser = DB::table('bengkels')->get();
   return view("halaman/halaman1",["datauser" => $datauser]);
 }
   
 
 public function halaman2()
   {
-  return view("halaman/halaman2");
+    $datauser = DB::table('users')->get();
+    return view("halaman/halaman2",["datauser" => $datauser]);
 }
 public function halaman3()
   {

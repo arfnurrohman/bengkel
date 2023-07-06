@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1 style="text-align: center; ">DATA USER</h1>
+    <h1 style="text-align: center; ">DATA BARANG</h1>
     <table class="table table-hover">
     <thead class="thead-dark">
     <tr>
@@ -38,7 +38,7 @@
 
      @endforeach
      <script>
-    function deleteuser(data, id) {
+    function deletebengkel(data, id) {
         var r = confirm("Delete data " + data + "?");
         if (r == true) {
             window.location.replace("/deletebengkel/" + id);

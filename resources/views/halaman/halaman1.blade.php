@@ -174,7 +174,7 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active " class="center">
-      <img src="{{url('img/fixie.jpg')}}" alt="Slide1" width="1300" height="500">
+     <center> <img  src="{{url('images/fixie.jpg')}}" alt="Slide1" width="1000" height="500"></center> 
         <div class="container">
           <div class="carousel-caption text-start">
             <h1>Example headline.</h1>
@@ -184,7 +184,7 @@
         </div>
       </div>
       <div class="carousel-item">
-      <img src="{{url('img/mtb1.jpg')}}" alt="Slide1" width="1300" height="500"class="center">
+     <center> <img src="{{url('images/mtb1.jpg')}}" alt="Slide1" width="1000" height="500"class="center"></center>
         <div class="container">
           <div class="carousel-caption">
             <h1>Another example headline.</h1>
@@ -194,7 +194,7 @@
         </div>
       </div>
       <div class="carousel-item" class="center">
-      <img src="{{url('img/bmx.jpg')}}" alt="Slide1" width="1300" height="500"calass>
+      <center><img src="{{url('images/bmx.jpg')}}" alt="Slide1" width="1000" height="500"calass></center>
         <div class="container">
           <div class="carousel-caption text-end">
             <h1>One more for good measure.</h1>
@@ -218,31 +218,29 @@
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
-  @foreach ($datauser as $user)
-  <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-                                    <td><img src="{{ asset('/storage/images/'. Auth::user()->image )}}" style="width: 25px;" height="25px" alt=""></td>
-      <h2 class="fw-normal">{{ Auth::user()->name }}</h2>
-        <p>{{ Auth::user()->name }}</p>
-        <p><a class="btn btn-secondary" href="#">{{ Auth::user()->name }}&raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-      <img src="{{url('img/fixie.jpg')}}" class="bd-placeholder-img rounded-circle" width="140" height="140">
-        <h2 class="fw-normal">Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-      <img src="{{url('img/bmx.jpg')}}" class="bd-placeholder-img rounded-circle" width="140" height="140">
-        <h2 class="fw-normal">Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-@endforeach
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 mb-5">
+            <img src="{{ url('images/logo.png') }}" class="rounded mx-auto d-block" width="700" alt="">
+        </div>
+        @foreach ($datauser as $user)
+        <div class="col-md-3">
+            <div class="card">
+                   <img style="" src="{{ asset('/storage/images/'.$user->image )}}" style="width: 100px;" height="200px" alt="">   <div class="card-body">
+                    <h5 class="card-title">{{ $user->nama }}</h5>
+               
+                     <strong>Harga :</strong> Rp. {{ number_format($user->harga)}} <br>
+                    <strong>Stok :</strong>{{ $user->jenis }} <br>
+                    <hr>
+                    <strong>Keterangan :</strong> 
+                    {{ $user->keterangan }}
+                </p>
+              <center>  <a href="{{ url('pesan') }}/{{ $user->id }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Pesan</a> </center>
+              </div>
+            </div>
+         <p></p>
+        </div>
+        @endforeach
 
     <!-- START THE FEATURETTES -->
 
