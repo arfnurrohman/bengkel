@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\bengkel;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -25,5 +27,12 @@ public function halaman3()
 public function halaman4()
   {
   return view("halaman/halaman4");
+  
+}
+public function index($id)
+{
+  $datauser = bengkel::where('id', $id)->first();
+
+  return view("halaman/pesan",["datauser" => $datauser]);
 }
 }

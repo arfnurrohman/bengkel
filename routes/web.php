@@ -45,3 +45,5 @@ Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman
  Route::post('/updatebengkel',[App\Http\Controllers\BengkelController::class, 'updatebengkel']);
  Route::get('/deletebengkel/{id}',[App\Http\Controllers\BengkelController::class, 'deletebengkel']);
  Route::get('/halaman4', [App\Http\Controllers\HalamanController::class, 'halaman4']);
+ Route::get('pesan/{id}', [App\Http\Controllers\HalamanController::class,'index']);
+ Route::post('pesan/{id}', [App\Http\Controllers\HalamanController::class,'pesan']);

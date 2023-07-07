@@ -234,7 +234,8 @@
                     <hr>
                     <strong>Keterangan :</strong> 
                     {{ $user->keterangan }}
-                </p>
+                </p> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
               <center>  <a href="{{ url('pesan') }}/{{ $user->id }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Pesan</a> </center>
               </div>
             </div>
