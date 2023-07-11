@@ -14,12 +14,8 @@
                     @auth
              
                 @if(Auth::user()->role == 'admin')
-                <li class="nav-item">
-                    <a class="nav-link" href="/halaman1">Halaman 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/halaman2">Halaman 2</a>
-                </li>
+              
+              
                 <li class="nav-item">
                     <a class="nav-link" href="/datauser">data user</a>
                 </li>
@@ -29,7 +25,22 @@
                 @endif
                 @if(in_array(Auth::user()->role, ['admin','user']))
                 <li class="nav-item">
-                    <a class="nav-link" href="/halaman3">Halaman 3</a>
+                    <a class="nav-link" href="/halaman1">SEPERPART</a>
+                </li>
+                <li class="nav-item">
+                    <?php
+                     $pesanan_utama = App\Models\pesanan::where('user_id', Auth::user()->id)->where('status',0)->first();
+                     if(!empty($pesanan_utama))
+                        {
+                         $notif = App\Models\PesananDetail::where('pesanan_id', $pesanan_utama->id)->count(); 
+                        }
+                    ?>
+                    <a class="nav-link" href="{{ url('check-out') }}">
+                        <i class="fa fa-shopping-cart"></i>
+                        @if(!empty($notif))
+                        <span class="badge badge-danger">{{ $notif }}</span>
+                        @endif
+                    </a>
                 </li>
                 @endif
                 @endauth

@@ -26,13 +26,6 @@ public function halaman3()
 }
 public function halaman4()
   {
-  return view("halaman/halaman4");
-  
-}
-public function index($id)
-{
-  $datauser = bengkel::where('id', $id)->first();
-
-  return view("halaman/pesan",["datauser" => $datauser]);
+  return view("halaman/halaman4"); 
 }
 }

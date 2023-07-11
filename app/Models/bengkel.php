@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class bengkel extends Model
 {
-    use HasFactory;
+    
+    public function pesanan_detail() 
+	{
+	     return $this->hasMany('App\Models\PesananDetail','bengkel_id', 'id');
+	}
 }

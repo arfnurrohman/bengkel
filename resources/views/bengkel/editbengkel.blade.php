@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Form User</h1>
+    <h1>EDIT BARANG</h1>
     <form class="form-horizontal" action="/updatebengkel" method="post"enctype="multipart/form-data">
         <div class="form-group row">
             <label for="inputName" class="col-sm-2 col-form-label">Nama</label>

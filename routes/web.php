@@ -29,6 +29,7 @@ Route::middleware(['auth', 'checkRole:admin'])->group(function () {
 
 Route::middleware(['auth', 'checkRole:admin,user'])->group(function () { 
 Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman3']);
+Route::get('/halaman1', [App\Http\Controllers\HalamanController::class, 'halaman1']);
  });
 
  Route::get('/datauser',[App\Http\Controllers\UserController::class, 'datauser']);
@@ -45,5 +46,8 @@ Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman
  Route::post('/updatebengkel',[App\Http\Controllers\BengkelController::class, 'updatebengkel']);
  Route::get('/deletebengkel/{id}',[App\Http\Controllers\BengkelController::class, 'deletebengkel']);
  Route::get('/halaman4', [App\Http\Controllers\HalamanController::class, 'halaman4']);
- Route::get('pesan/{id}', [App\Http\Controllers\HalamanController::class,'index']);
- Route::post('pesan/{id}', [App\Http\Controllers\HalamanController::class,'pesan']);
+ Route::get('pesan/{id}', [App\Http\Controllers\PesanController::class,'index']);
+ Route::post('pesan/{id}', [App\Http\Controllers\PesanController::class,'pesan']);
+ Route::get('check-out', [App\Http\Controllers\PesanController::class,'check_out']);
+ Route::delete('/check-out/{id}', [App\Http\Controllers\PesanController::class,'delete']);
+ 

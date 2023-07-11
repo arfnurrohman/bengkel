@@ -18,8 +18,11 @@
 </head>
 <body>
     <div id="app">
+      
     @include('layouts/navbar')
-
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
         <main class="py-4">
             @yield('content')
         </main>

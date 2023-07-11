@@ -29,14 +29,15 @@
                 <input type="password" class="form-control" placeholder="Input Password" name="password">
             </div>
         </div>
-        </div>
         <div class="form-group row">
             <label for="inputPasssword" class="col-sm-2 col-form-label">foto</label>
             <input type="hidden" name="id" value="{{$user->id}}">
             <div class="col-sm-10">
-                <input type="file" class="form-control"  name="foto">
+            <input type="file" class="form-control"  name="foto">
             </div>
         </div>
+        </div>
+       
         {{ csrf_field() }}
 	<input type="hidden" name="id" value="{{$user->id}}">
         <button type="submit" class="btn btn-primary">Edit</button>

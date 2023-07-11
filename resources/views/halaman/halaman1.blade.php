@@ -125,41 +125,67 @@
         <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
       </symbol>
     </svg>
-
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle theme (auto)">
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
-    </div>
+    <style>
+      #topbar {
+      height:30px;
+      width:auto;
+      margin:0 auto;
+      background: #005094 url('http://lh3.ggpht.com/_beEpWOXwLJE/TIb57Lu4fwI/AAAAAAAABE0/q7niFVRbyNE/top-toolbar.jpg');
+      background-repeat:repeat-x;
+      text-align:left;
+      padding-top:4px;
+      }
+      #adsground {
+      height:auto;
+      margin:0 auto;
+      width: 780px;
+      background:#fff;
+      border-bottom:2px #005094 solid;
+      border-right:2px #005094 solid;
+      border-left:2px #005094 solid;
+      text-align:Center;
+      padding:4px;
+      }
+      
+      
+      #headlineatas {
+      opacity:1.0;
+      height:auto;
+      width:auto;
+      position:fixed;
+      top:65px;
+      left:170px;
+      border-bottom:1px #005094 solid;
+      border-bottom:0px blue solid;
+      color:#333;
+      padding:0px;
+      z-index:1001;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -220px;
+      margin-left: -400px;
+      font-size:13px;}
+      </style>
+      <script type="text/javascript">
+      function getValue()
+      {
+      document.getElementById("headlineatas").style.display = 'none';
+      }
+      </script>
+      <div id="headlineatas">
+      <div id="topbar">
+      <span style="color:#fff;font-size:13px;font-weight:bold;text-shadow:black 0.1em 0.1em 0.1em;float:right;padding-top:3px;padding-right:10px"><a target="_blank" onclick="getValue()">close</a></span>
+      </div>
+      <div id="adsground">
+      <p>
+        <h1></h1>
+        <img  src="{{url('images/fx.png')}}"  width="750" height="450">
+      <br/></p>
+      </div>
+      </div>
+      
+   
 
     
 
@@ -177,9 +203,7 @@
      <center> <img  src="{{url('images/fixie.jpg')}}" alt="Slide1" width="1000" height="500"></center> 
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          <p><a class="btn btn-lg btn-primary" >FIXIE</a></p>
           </div>
         </div>
       </div>
@@ -187,9 +211,8 @@
      <center> <img src="{{url('images/mtb1.jpg')}}" alt="Slide1" width="1000" height="500"class="center"></center>
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            <p><a class="btn btn-lg btn-primary" >MTB</a></p>
+            
           </div>
         </div>
       </div>
@@ -197,9 +220,7 @@
       <center><img src="{{url('images/bmx.jpg')}}" alt="Slide1" width="1000" height="500"calass></center>
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            <p><a class="btn btn-lg btn-primary" href="#">BMX</a></p>
           </div>
         </div>
       </div>
@@ -253,7 +274,7 @@
         <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
       </div>
       <div class="col-md-5">
-      <img src="{{url('img/mtb1.jpg')}}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+      <img src="{{url('images/bmx.jpg')}}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
       
          </div>
     </div>
@@ -266,7 +287,7 @@
         <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
       </div>
       <div class="col-md-5 order-md-1">
-      <img src="{{url('img/mtb1.jpg')}}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+      <img src="{{url('images/fixie.jpg')}}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
       
       </div>
     </div>
@@ -279,7 +300,7 @@
         <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
       </div>
       <div class="col-md-5">
-      <img src="{{url('img/mtb1.jpg')}}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+      <img src="{{url('images/mtb1.jpg')}}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
       
           </div>
     </div>

@@ -9,7 +9,7 @@
     <tr>
       <th scope="col">NO</th>
       <th scope="col">NAMA</th>
-      <th scope="col">JENIS</th>
+      <th scope="col">STOK</th>
       <th scope="col">HARGA</th>
       <th scope="col">KETERANGAN</th>
       <th scope="col">GAMBAR</th>

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Data User</h1>
+    <h1>DATA BENGKEL</h1>
     <form class="form-horizontal" action="addbengkel" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-group row">
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="email" class="col-sm-2 col-form-label">jenis</label>
+            <label for="email" class="col-sm-2 col-form-label">stok</label>
             <div class="col-sm-10">
                 <input class="form-control" type="text" name="jenis" value="">
             </div>
