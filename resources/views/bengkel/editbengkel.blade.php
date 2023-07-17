@@ -11,20 +11,20 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+            <label for="inputEmail" class="col-sm-2 col-form-label">stok</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" placeholder="Input Email" name="jenis" value="{{$bengkel->jenis}}">
             </div>
         </div>
        
         <div class="form-group row">
-            <label for="inputName" class="col-sm-2 col-form-label">Nama</label>
+            <label for="inputName" class="col-sm-2 col-form-label">harga</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" placeholder="Input Name" name="harga" value="{{$bengkel->harga}}">
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+            <label for="inputEmail" class="col-sm-2 col-form-label">keterangan</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" placeholder="Input Email" name="keterangan" value="{{$bengkel->keterangan}}">
             </div>
