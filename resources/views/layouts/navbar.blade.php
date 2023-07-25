@@ -25,7 +25,7 @@
                 @endif
                 @if(in_array(Auth::user()->role, ['admin','user']))
                 <li class="nav-item">
-                    <a class="nav-link" href="/halaman1">SEPERPART</a>
+                    <a class="nav-link" href="/halaman1">SHOP</a>
                 </li>
                 <li class="nav-item">
                     <?php
@@ -74,6 +74,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ url('profile') }}">
+                                        Profile
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

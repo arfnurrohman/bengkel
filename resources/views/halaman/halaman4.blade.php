@@ -1,6 +1,50 @@
 @extends('layouts.app')
-
 @section('content')
-
-<h1>halaman4</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a href="{{ url('home') }}" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Kembali</a>
+        </div>
+        <div class="col-md-12 mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url('home') }}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4><i class="fa fa-user"></i> My Profile</h4>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Nama</td>
+                                <td width="10">:</td>
+                                <td>{{ $user->name }}</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>:</td>
+                                <td>{{ $user->email }}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>:</td>
+                                <td>{{ $user->role }}</td>
+                            </tr>
+                            <tr>
+                                <td>password</td>
+                                <td>:</td>
+                                <td>{{ $user->password }}</td>
+                            </tr>
+                            <tr>
+                                <img src="{{ asset('/storage/images/'.$user->image )}}" style="width: 100px;" height="100px" alt="">
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 @endsection

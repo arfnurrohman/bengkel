@@ -30,6 +30,7 @@ Route::middleware(['auth', 'checkRole:admin'])->group(function () {
 Route::middleware(['auth', 'checkRole:admin,user'])->group(function () { 
 Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman3']);
 Route::get('/halaman1', [App\Http\Controllers\HalamanController::class, 'halaman1']);
+Route::get('profile',  [App\Http\Controllers\HalamanController::class, 'halaman4']);
  });
 
  Route::get('/datauser',[App\Http\Controllers\UserController::class, 'datauser']);
