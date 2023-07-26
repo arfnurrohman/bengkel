@@ -40,7 +40,7 @@ data-ad-slot="1234567890"></ins>
                                 <th>Jumlah</th>
                                 <th>Harga</th>
                                 <th>Total Harga</th>
-                                <th></th>
+                                <th>hapus</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -55,7 +55,15 @@ data-ad-slot="1234567890"></ins>
                                 <td>{{ $pesanan_detail->jumlah }} barang</td>
                                 <td align="">Rp. {{ number_format($pesanan_detail->bengkel->harga) }}</td>
                                 <td align="">Rp. {{ number_format($pesanan_detail->jumlah_harga) }}</td>
-                               
+                                <td>
+                                    <form action="{{ url('check-out') }}/{{ $pesanan_detail->id }}" method="post">
+                                        @csrf
+                                        {{ method_field('DELETE') }}
+                                    </p> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin akan menghapus data ?');"><i class="fa fa-trash"></i><i class="bi-trash"></i></button>
+                                    </form>
+                                </td>
+                           
                             </tr>
                             @endforeach
                             <tr>

@@ -90,5 +90,20 @@ public function pesan(Request $request, $id)
           return view('halaman/check_out', compact('pesanan', 'pesanan_details'));
       return redirect('halaman1');
     }
+    public function delete($id)
+    {
+        $pesanan_detail = PesananDetail::where('id', $id)->first();
+
+        $pesanan = Pesanan::where('id', $pesanan_detail->pesanan_id)->first();
+        $pesanan->jumlah_harga = $pesanan->jumlah_harga-$pesanan_detail->jumlah_harga;
+        $pesanan->update();
+
+
+        $pesanan_detail->delete();
+
+       
+        return redirect('check-out');
+    }
+    
       
 }
