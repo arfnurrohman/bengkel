@@ -4,6 +4,33 @@
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
+  <style>
+    body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+    
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+    </style>
+    </head>
+    <body>
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <button style=" z-index: 99999; width: 60px; padding: 12px; right: 0; bottom: 0; position: fixed; " onclick="myFunction()"class="btn btn-dark btn-sm"><i class="fa fa-sun"></i><i class="fa fa-moon"></i></button>
+    
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+    
   <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
@@ -234,11 +261,12 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
+ 
 
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
+  
   <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12 mb-5">

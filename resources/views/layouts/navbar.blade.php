@@ -25,7 +25,7 @@
                 @endif
                 @if(in_array(Auth::user()->role, ['admin','user']))
                 <li class="nav-item">
-                    <a class="nav-link" href="/halaman1">SEPERPART</a>
+                    <a class="nav-link" href="/halaman1">SHOP</a>
                 </li>
                 <li class="nav-item">
                     <?php
@@ -66,6 +66,7 @@
                                 </li>
                             @endif
                         @else
+                        <img src="{{ asset('/storage/images/'.Auth::user()->image )}}" style="width: 40px;" height="40px"   >
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -74,6 +75,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ url('profile') }}">
+                                        Profile
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
