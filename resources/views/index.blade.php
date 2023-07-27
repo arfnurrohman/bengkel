@@ -182,7 +182,7 @@
             </div>
         </section>
         <!-- About-->
-        <!-- <section class="page-section" id="about">
+        <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">About</h2>
@@ -190,7 +190,7 @@
                 </div>
                 <ul class="timeline">
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="bs/assets/img/about/bkll.png" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="bs/assets/img/about/bkll." alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>2009-2011</h4>
@@ -242,7 +242,7 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section>
         <!-- Team-->
         <section class="page-section bg-light" id="team">
             <div class="container">
