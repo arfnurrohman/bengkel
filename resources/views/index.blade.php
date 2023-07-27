@@ -182,7 +182,7 @@
             </div>
         </section>
         <!-- About-->
-        <section class="page-section" id="about">
+        <!-- <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">About</h2>
@@ -242,7 +242,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
         <!-- Team-->
         <section class="page-section bg-light" id="team">
             <div class="container">
