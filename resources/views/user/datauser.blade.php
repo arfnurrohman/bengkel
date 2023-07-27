@@ -73,6 +73,9 @@
     }
 </script>
 </table>
-
+Halaman : {{  $datauser->currentPage() }} <br/>
+    Jumlah Data : {{   $datauser->total() }} <br/>
+    Data Per Halaman : {{   $datauser->links('pagination::bootstrap-5') }} <br/>
+  
 </div>
 @endsection

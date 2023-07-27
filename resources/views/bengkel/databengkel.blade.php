@@ -62,7 +62,10 @@
 </td>
 
     </tr>
-  
+    
+   
+   
+    
 
      @endforeach
      <script>
@@ -74,6 +77,9 @@
     }
 </script>
 </table>
-
+Halaman : {{  $databengkel->currentPage() }} <br/>
+    Jumlah Data : {{  $databengkel->total() }} <br/>
+    Data Per Halaman : {{  $databengkel->perPage() }} <br/>
+  <div>Data Per Halaman : {{ $databengkel->links('pagination::bootstrap-5')}}</div>  
 </div>
 @endsection

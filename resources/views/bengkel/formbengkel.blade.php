@@ -37,6 +37,10 @@
             <label for="name" class="col-sm-2 col-form-label">Nama</label>
             <div class="col-sm-10">
                 <input class="form-control" type="text" name="nama" value="">
+                @error('nama')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
             </div>
         </div>
         <div class="form-group row">
