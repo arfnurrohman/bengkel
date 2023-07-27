@@ -59,4 +59,6 @@ public function halaman2()
         }
         $user->save();
         return redirect("/halaman4");
-    }}
+    }
+  
+  }
