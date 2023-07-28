@@ -12,12 +12,27 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
+    
     public function datauser()
     {
         $datauser = DB::table('users')->paginate(5);
         //dd($datauser);
         return view('user.datauser', ['datauser' => $datauser]);
     }
+    public function mencari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$datauser = DB::table('users')
+		->where('name','like',"%".$cari."%")
+		->paginate();
+ 
+    		// mengirim data pegawai ke view index
+            return view('user.datauser', ['datauser' => $datauser]);
+    }
+
     public function formuser()
     {
         return view('user.formuser');

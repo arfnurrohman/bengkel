@@ -9,6 +9,20 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 class HalamanController extends Controller
 {
+  public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$datauser = DB::table('bengkels')
+		->where('nama','like',"%".$cari."%")
+		->paginate();
+ 
+    		// mengirim data pegawai ke view index
+        return view("halaman/halaman1",["datauser" => $datauser]);
+ 
+	}
   public function halaman1()
   {
     $datauser = DB::table('bengkels')->paginate(8);

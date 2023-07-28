@@ -266,7 +266,14 @@
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
-  
+ 
+	<form action="cari" method="GET">
+	<center>	<input type="text" name="cari" placeholder="apa yang anda cari" >	<input type="submit" value="CARI"></center>
+		
+	</form>
+
+
+ 
   <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12 mb-5">

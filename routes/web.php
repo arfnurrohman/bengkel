@@ -25,6 +25,9 @@ Route::middleware(['auth', 'checkRole:admin'])->group(function () {
     Route::get('/halaman1', [App\Http\Controllers\HalamanController::class, 'halaman1']);
     Route::get('/halaman2', [App\Http\Controllers\HalamanController::class, 'halaman2']);
     Route::get('/halaman3', [App\Http\Controllers\HalamanController::class, 'halaman3']);
+    Route::get('/cari',[App\Http\Controllers\HalamanController::class,'cari']);
+    Route::get('/mencari',[App\Http\Controllers\UserController::class,'mencari']);
+    Route::get('/cari',[App\Http\Controllers\BengkelController::class,'cari']);
     });
 
 Route::middleware(['auth', 'checkRole:admin,user'])->group(function () { 

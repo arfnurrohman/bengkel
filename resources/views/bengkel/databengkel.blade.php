@@ -29,7 +29,10 @@
        element.classList.toggle("dark-mode");
     }
     </script>
-    
+    <form action="cari" method="GET">
+    	<input type="text" name="cari" placeholder="apa yang anda cari" >	<input type="submit" value="CARI">
+        
+      </form>
     <h1 style="text-align: center; ">DATA BARANG</h1>
     <table class="table table-hover">
     <thead class="thead-dark">
@@ -80,6 +83,6 @@
 Halaman : {{  $databengkel->currentPage() }} <br/>
     Jumlah Data : {{  $databengkel->total() }} <br/>
     Data Per Halaman : {{  $databengkel->perPage() }} <br/>
-  <div>Data Per Halaman : {{ $databengkel->links('pagination::bootstrap-5')}}</div>  
+  <div> {{ $databengkel->links('pagination::bootstrap-5')}}</div>  
 </div>
 @endsection
