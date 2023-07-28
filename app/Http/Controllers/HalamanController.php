@@ -11,7 +11,7 @@ class HalamanController extends Controller
 {
   public function halaman1()
   {
-    $datauser = DB::table('bengkels')->get();
+    $datauser = DB::table('bengkels')->paginate(8);
   return view("halaman/halaman1",["datauser" => $datauser]);
 }
   

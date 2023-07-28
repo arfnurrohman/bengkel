@@ -9,13 +9,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class BengkelController extends Controller
+
 {
+
+
+
     public function databengkel()
     {
-        $datauser = DB::table('bengkels')->get();
        
+        $datauser = DB::table('bengkels')->paginate(5);
+
         return view('bengkel.databengkel', ['databengkel' => $datauser]);
     }
     public function formbengkel()

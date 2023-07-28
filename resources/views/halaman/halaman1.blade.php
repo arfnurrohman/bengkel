@@ -291,7 +291,10 @@
          <p></p>
         </div>
         @endforeach
-
+        <div>  Halaman : {{  $datauser->currentPage() }} <br/>
+          Jumlah Data : {{   $datauser->total() }} <br/>
+          Data Per Halaman : {{   $datauser->links('pagination::bootstrap-5') }} <br/>
+        <br/>
     <!-- START THE FEATURETTES -->
 
     <hr class="featurette-divider">
