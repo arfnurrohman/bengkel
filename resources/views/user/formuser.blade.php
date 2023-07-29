@@ -46,10 +46,12 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="role" class="col-sm-2 col-form-label">Role</label>
+            <label for="inputRole" class="col-sm-2 col-form-label">Role</label>
             <div class="col-sm-10">
-                <input class="form-control" type="text" name="role" value="">
+            <input type="radio" name="role" value="admin">  admin<br>
+            <input type="radio" name="role" value="user"> user<br>
             </div>
+        
         </div>
         <div class="form-group row">
             <label for="password" class="col-sm-2 col-form-label">Password</label>
