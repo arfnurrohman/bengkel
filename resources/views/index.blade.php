@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Agency - Start Bootstrap Theme</title>
+        <title>Agency - Bengkel Sepeda</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="bs/assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -251,6 +251,16 @@
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <div class="row">
+                <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="bs/assets/img/team/4_.jpg" alt="..." />
+                            <h4>Aldi Taher</h4>
+                            <p class="text-muted">Admin</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
                     <div class="col-lg-4">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="bs/assets/img/team/12.jpg" alt="..." />
@@ -266,6 +276,16 @@
                             <img class="mx-auto rounded-circle" src="bs/assets/img/team/tretan.jpg" alt="..." />
                             <h4>Tretan</h4>
                             <p class="text-muted">Designer </p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="bs/assets/img/team/kuchi.jpg" alt="..." />
+                            <h4>Justin</h4>
+                            <p class="text-muted">Promotor</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
@@ -380,6 +400,48 @@
                 </form>
             </div>
         </section>
+
+        <head>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style type="text/css">
+        #map {
+          height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+      <center>  <h2>Lokasi Toko Sepeda !!!!!</h2></center>
+        <div id="map"></div>
+    </div>
+
+    <script type="text/javascript">
+        function initMap() {
+          const myLatLng = { lat: -0.109612, lng: 109.406040 };
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 5,
+            center: myLatLng,
+          });
+  
+          new google.maps.Marker({
+            position: myLatLng,
+            map,
+            title: "Hello Rajkot!",
+          });
+        }
+  
+        window.initMap = initMap;
+    </script>
+
+    <script type="text/javascript"
+        src="https://maps.google.com/maps/api/js?key={{ env('GOOGLE_MAP_KEY') }}&callback=initMap" ></script>
+
+</body>
+<p></p>
+  <hr class="featurette-divider">
+
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
@@ -608,6 +670,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
