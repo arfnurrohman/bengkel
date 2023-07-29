@@ -348,8 +348,47 @@
     <!-- /END THE FEATURETTES -->
 
   </div><!-- /.container -->
-
-
+  <head>
+   
+   
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style type="text/css">
+        #map {
+          height: 400px;
+        }
+    </style>
+</head>
+    
+<body>
+    <div class="container mt-5">
+      <center>  <h2>lokasi toko sepeda !!!!!</h2></center>
+        <div id="map"></div>
+    </div>
+    
+    <script type="text/javascript">
+        function initMap() {
+          const myLatLng = { lat: -0.109612, lng: 109.406040 };
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 5,
+            center: myLatLng,
+          });
+  
+          new google.maps.Marker({
+            position: myLatLng,
+            map,
+            title: "Hello Rajkot!",
+          });
+        }
+  
+        window.initMap = initMap;
+    </script>
+  
+    <script type="text/javascript"
+        src="https://maps.google.com/maps/api/js?key={{ env('GOOGLE_MAP_KEY') }}&callback=initMap" ></script>
+  
+</body>
+<p></p>
+  <hr class="featurette-divider">
   <!-- FOOTER -->
   <footer class="container">
     <p class="float-end"><a href="#">Back to top</a></p>

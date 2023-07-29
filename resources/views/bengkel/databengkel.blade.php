@@ -83,6 +83,7 @@
 Halaman : {{  $databengkel->currentPage() }} <br/>
     Jumlah Data : {{  $databengkel->total() }} <br/>
     Data Per Halaman : {{  $databengkel->perPage() }} <br/>
-  <div> {{ $databengkel->links('pagination::bootstrap-5')}}</div>  
+  <div>: {{ $databengkel->links('pagination::bootstrap-5')}}</div>  
 </div>
+
 @endsection
