@@ -361,7 +361,7 @@
     
 <body>
     <div class="container mt-5">
-      <center>  <h2>lokasi toko sepeda !!!!!</h2></center>
+      <center>  <h2>Lokasi Toko Sepeda !!!!!</h2></center>
         <div id="map"></div>
     </div>
     
