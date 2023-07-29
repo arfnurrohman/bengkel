@@ -25,6 +25,9 @@
                 @endif
                 @if(in_array(Auth::user()->role, ['admin','user']))
                 <li class="nav-item">
+                    <a class="nav-link" href="/halaman3">fixie</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/halaman1">SHOP</a>
                 </li>
                 <li class="nav-item">

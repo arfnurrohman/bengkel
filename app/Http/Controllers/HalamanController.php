@@ -74,5 +74,10 @@ public function halaman2()
         $user->save();
         return redirect("/halaman4");
     }
-  
+    public function halaman3()
+    {
+    
+    return view("halaman/halaman3");
+  }
+    
   }
