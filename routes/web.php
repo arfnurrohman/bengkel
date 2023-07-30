@@ -38,7 +38,7 @@ Route::post('profile',[App\Http\Controllers\HalamanController::class, 'update'])
  });
 
  Route::get('/datauser',[App\Http\Controllers\UserController::class, 'datauser']);
- Route::get('/fromuser', [App\Http\Controllers\UserController::class, 'formuser']);
+ Route::get('/formuser', [App\Http\Controllers\UserController::class, 'formuser']);
  Route::post('/adduser', [App\Http\Controllers\UserController::class, 'adduser']); 
  Route::get('/datauser/{id}', [App\Http\Controllers\UserController::class, 'edituser']);
  Route::post('/updateuser', [App\Http\Controllers\UserController::class, 'updateuser']);
