@@ -44,25 +44,25 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="email" class="col-sm-2 col-form-label">stok</label>
+            <label for="email" class="col-sm-2 col-form-label">Stok</label>
             <div class="col-sm-10">
                 <input class="form-control" type="text" name="jenis" value="">
             </div>
         </div>
         <div class="form-group row">
-            <label for="role" class="col-sm-2 col-form-label">harga</label>
+            <label for="role" class="col-sm-2 col-form-label">Harga</label>
             <div class="col-sm-10">
                 <input class="form-control" type="text" name="harga" value="">
             </div>
         </div>
         <div class="form-group row">
-            <label for="password" class="col-sm-2 col-form-label">keterangan</label>
+            <label for="password" class="col-sm-2 col-form-label">Keterangan</label>
             <div class="col-sm-10">
                 <input class="form-control" type="text" name="keterangan" value="">
             </div>
         </div>
         <div class="mb-3">
-                      <label for="formFile" class="form-label">gambar</label>
+                      <label for="formFile" class="form-label">Gambar</label>
                       <input class="form-control" type="file" name="foto" id="formFile">
                     </div>
 	{{ csrf_field() }}
