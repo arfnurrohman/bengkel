@@ -232,11 +232,11 @@
                     <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
-                                Be Part
+                                Jadilah
                                 <br />
-                                Of Our
+                                Bagian dari
                                 <br />
-                                Story!
+                                Perjalanan Kami!!!
                             </h4>
                         </div>
                     </li>
