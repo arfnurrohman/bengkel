@@ -193,7 +193,7 @@
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="bs/assets/img/about/bkll.png" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>January 2023</h4>
+                                <h4>Juni 2023</h4>
                                 <h4 class="subheading">Our Humble Beginnings</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted"></p></div>
