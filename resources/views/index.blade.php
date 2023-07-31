@@ -214,7 +214,7 @@
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>April 2023</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
+                                <h4 class="subheading">Memulai Pelayanan Bisnis Bengkel</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted"></p></div>
                         </div>
