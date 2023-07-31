@@ -194,7 +194,7 @@
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>Juni 2023</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
+                                <h4 class="subheading">Plainning</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted"></p></div>
                         </div>
